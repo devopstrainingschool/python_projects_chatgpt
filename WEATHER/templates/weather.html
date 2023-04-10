@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #64a4cf;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 36px;
+            margin-top: 0;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 60%;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        p {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Current Weather in {{ city }}</h1>
+        <p>Description: {{ weather_description }}</p>
+        <p>Temperature: {{ temperature }} &#8451;</p>
+        <p>Humidity: {{ humidity }}%</p>
+        <form method="post">
+            <input type="text" name="city" placeholder="Enter city">
+            <button type="submit">Get Weather</button>
+        </form>
+    </div>
+</body>
+</html>
