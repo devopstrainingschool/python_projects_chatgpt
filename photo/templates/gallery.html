@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Photo Gallery</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('upload') }}">Upload Photo</a></li>
+          <li><a href="{{ url_for('gallery') }}">View Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        {% for url in urls %}
+        <img src="{{ url }}" alt="Photo">
+        {% endfor %}
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Photo Gallery</p>
+    </footer>
+  </body>
+</html>
